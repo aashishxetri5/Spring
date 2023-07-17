@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+ 	http://www.springframework.org/schema/beans/spring-beans.xsd
+ 	http://www.springframework.org/schema/context
+ 	http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean class="com.springcore.CI.Certificate" name="certif1">
+		<constructor-arg value="Sir. Aashish Katwal" />
+	</bean>
+
+	<bean class="com.springcore.CI.Certificate" name="certif2"
+		c:name="Mastered Java Programming" />
+
+	<bean class="com.springcore.CI.Person" name="person1">
+		<constructor-arg value="211812" />
+		<constructor-arg value="Aashish" />
+		<constructor-arg value="Boudha" />
+		<constructor-arg ref="certif1" />
+	</bean>
+
+	<bean class="com.springcore.CI.Person" name="person2">
+
+		<constructor-arg value="Aashish Katwal" />
+		<constructor-arg value="Aarubari" />
+		<constructor-arg value="211812" type="int" />
+		<constructor-arg ref="certif2" />
+	</bean>
+
+	<bean class="com.springcore.CI.Person" name="personList">
+		<constructor-arg value="211812" type="int" />
+		<constructor-arg value="Aashish Katwal" />
+		<constructor-arg>
+			<list>
+				<value>23498</value>
+				<value>2349832</value>
+				<value>23498212</value>
+			</list>
+		</constructor-arg>
+	</bean>
+
+
+</beans>
