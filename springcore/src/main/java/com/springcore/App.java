@@ -40,8 +40,8 @@ public class App {
 		
 //		Injecting objects using p schema
 		
-//		Student std3 = (Student) ac.getBean("student3");
-//		System.out.println(std3);
+		Student std3 = (Student) ac.getBean("student3");
+		System.out.println(std3);
 
 		((ConfigurableApplicationContext) ac).close();
 	}
