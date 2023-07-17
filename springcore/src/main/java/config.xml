@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+ 	http://www.springframework.org/schema/beans/spring-beans.xsd
+ 	http://www.springframework.org/schema/context
+ 	http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+	<bean class="com.springcore.Student" id="student1">
+		<property name="studentId">
+			<value>211812</value>
+		</property>
+		<property name="studentName">
+			<value>Aashish</value>
+		</property>
+		<property name="studentAddress" value="Aarubari" />
+	</bean>
+
+	<bean class="com.springcore.Student" id="student2">
+		<constructor-arg type="int" value="211812" />
+
+		<!-- Since String is an object, we need to specify the object Class -->
+		<constructor-arg type="java.lang.String"
+			value="Aashish" />
+		<constructor-arg type="java.lang.String"
+			value="Bouddha" />
+	</bean>
+
+	<bean class="com.springcore.Student" id="students">
+		<property name="studentId">
+			<value>211812</value>
+		</property>
+		<property name="studentName">
+			<value>Aashish</value>
+		</property>
+		<property name="studentAddress">
+			<value>Aarubari</value>
+		</property>
+		<property name="subj1" ref="subjectone" />
+		<property name="subj2" ref="subjecttwo" />
+	</bean>
+
+	<bean class="com.springcore.Subjects" id="subjectone">
+		<property name="subject1" value="NM" />
+		<property name="subject2" value="CG" />
+	</bean>
+
+	<bean class="com.springcore.Subjects" id="subjecttwo">
+		<property name="subject1" value="DSA" />
+		<property name="subject2" value="CA" />
+	</bean>
+
+</beans>
