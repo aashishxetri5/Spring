@@ -30,4 +30,12 @@ replay_pid*
 /.metadata
 
 #target folder
-/target
+/springcore/target
+
+#test folder
+/springcore/src/test
+
+#Others
+/springcore/.project
+/springcore/.classpath
+/springcore/.settings
