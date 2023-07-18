@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans.xsd 
+	http://www.springframework.org/schema/context 
+	http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+	<bean class="com.springcore.autowire.Person" name="person">
+		<property name="name" value="John Doe" />
+		<property name="age" value="35" />
+	</bean>
+
+
+	<bean class="com.springcore.autowire.Person" name="person1">
+		<constructor-arg name="name" value="John Doe" />
+		<constructor-arg name="age" value="35" />
+	</bean>
+
+	<!-- Whenever byName is used, it matches the name of the bean of Person 
+		object and that of the variable in the Student file. So, to autowire using 
+		XML, it is important that we match the name of the object and the bean. -->
+
+	<bean class="com.springcore.autowire.Student" name="Student1"
+		autowire="byName">
+		<property name="roll" value="1" />
+		<property name="majorCourse" value="CS" />
+	</bean>
+
+
+	<!-- If I create another bean of Person class(as below), then it would throw 
+		UnsatisfiedDependencyException because Spring wouldn't know which bean to 
+		wire to. -->
+
+	<bean class="com.springcore.autowire.Student" name="Student2"
+		autowire="byType">
+		<property name="roll" value="100" />
+		<property name="majorCourse" value="MBA" />
+	</bean>
+	<!-- Remove/Comment this above one to run the main method. -->
+
+	<bean class="com.springcore.autowire.Student" name="Student3"
+		autowire="constructor">
+		<property name="roll" value="1000" />
+		<property name="majorCourse" value="MCS" />
+	</bean>
+
+
+</beans>
