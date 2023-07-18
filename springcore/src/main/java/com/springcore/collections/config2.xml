@@ -9,10 +9,6 @@
  	http://www.springframework.org/schema/context
  	http://www.springframework.org/schema/context/spring-context.xsd">
 
-	<bean class="com.springcore.Student" name="student3"
-		p:studentId="211812" p:studentName="Aashish Katwal"
-		p:studentAddress="Aarubari, Boudha" />
-
 	<bean class="com.springcore.collections.Employees"
 		name="employee1">
 		<property name="employeeName" value="Aashish Katwal" />
