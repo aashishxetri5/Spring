@@ -11,9 +11,14 @@
 
 	<context:annotation-config />
 
-	<bean class="com.springcore.annotationsAW.Person" name="person">
+	<bean class="com.springcore.annotationsAW.Person" name="person1">
 		<property name="name" value="Johny Sapkota" />
 		<property name="age" value="50" />
+	</bean>
+
+	<bean class="com.springcore.annotationsAW.Person" name="person2">
+		<property name="name" value="Hari Green" />
+		<property name="age" value="38" />
 	</bean>
 
 	<bean class="com.springcore.annotationsAW.Student" name="Student1"

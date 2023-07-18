@@ -1,13 +1,15 @@
 package com.springcore.annotationsAW;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 
 public class Student {
 
 	private int roll;
 	private String majorCourse;
 	
-//	@Autowired
+	@Autowired
+	@Qualifier("person2")
 	private Person person;
 
 	public Student() {
@@ -48,7 +50,7 @@ public class Student {
 		return person;
 	}
 
-	@Autowired
+//	@Autowired
 	public void setPerson(Person person) {
 		System.out.println("Inside Setter");
 		this.person = person;
