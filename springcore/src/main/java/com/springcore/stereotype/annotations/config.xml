@@ -14,14 +14,17 @@
 
 
 	<!-- <context:annotation-config /> -->
-	
+
 	<util:list list-class="java.util.ArrayList" id="phNums">
 		<value>981273</value>
 		<value>988763</value>
 		<value>982374</value>
 	</util:list>
-	
-	
-	<context:component-scan base-package="com.springcore.stereotype.annotations" />
+
+	<context:component-scan
+		base-package="com.springcore.stereotype.annotations" />
+
+	<bean class="com.springcore.stereotype.annotations.Teacher"
+		name="teacher1" p:name="Puroshotam Sangroula" p:subject="AI" scope="singleton"/>
 
 </beans>
