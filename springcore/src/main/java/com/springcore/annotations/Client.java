@@ -17,6 +17,8 @@ public class Client {
 		
 		teacher1.getSubject().printName();
 		
+		System.out.println(teacher1);
+		
 		context1.close();
 		context2.close();
 

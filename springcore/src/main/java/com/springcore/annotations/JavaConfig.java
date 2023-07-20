@@ -12,14 +12,19 @@ public class JavaConfig {
 	@Bean(name = {"subject", "bisaya"})
 	public Subjects getSubjects() {
 		Subjects subject = new Subjects();
-		
+		return subject;
+	}
+
+	@Bean
+	public Subjects getSubjectDetails() {
+		Subjects subject = new Subjects("ToC", "CSC257");
 		return subject;
 	}
 
 	@Bean
 	public Teacher getTeacher() { //The method name is the name of the bean
 
-		Teacher teacher = new Teacher(getSubjects());
+		Teacher teacher = new Teacher("Pesal Rai", getSubjectDetails());
 		return teacher;
 	}
 	
