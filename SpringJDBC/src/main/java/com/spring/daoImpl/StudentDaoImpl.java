@@ -19,6 +19,23 @@ public class StudentDaoImpl implements StudentDao {
 		
 		return noOfInsertion;
 	}
+	
+	public int update(Student student) {
+		String query = "UPDATE Student set name=?, address=? where id=?";
+		int noOfUpdation = this.template.update(query, student.getName(), student.getAddress(), student.getId());
+		return noOfUpdation;
+	}
+	
+	public int delete(int id) {
+		String query = "DELETE FROM Student where id = ?";
+		int noOfDeletion = this.template.update(query, id);
+		return noOfDeletion;
+	}
+	
+	public void viewRecords() {
+		String query = "SELECT * FROM Student";
+		this.template.execute(query);
+	}
 
 	public JdbcTemplate getTemplate() {
 		return template;

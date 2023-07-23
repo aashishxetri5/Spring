@@ -16,14 +16,23 @@ public class App {
 		
 		Student std = new Student();
 		
-		std.setId(211825);
-		std.setName("Nayan Banskota");
-		std.setAddress("Samakhusi");
-		std.setGrade(15);
+//		std.setId(211825);
+//		std.setName("Nayan Banskota");
+//		std.setAddress("Samakhusi");
+//		std.setGrade(15);
 		
-		int result = dao.insert(std);
+//		std.setName("Ekanta Rai");
+//		std.setAddress("Ekantakuna");
+		
+//		int result = dao.insert(std);
+		
+//		int result = dao.update(std);
+		
+//		int result = dao.delete(std.getId());
+		
+		dao.viewRecords();
 				
-		System.out.println("Number of records inserted: " + result);
+//		System.out.println("Number of records affected: " + result);
 
 		context.close();
 	}
