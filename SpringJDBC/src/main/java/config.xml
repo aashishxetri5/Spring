@@ -12,7 +12,7 @@
 
 	<bean
 		class="org.springframework.jdbc.datasource.DriverManagerDataSource"
-		id="driverManagerDS">
+		id="getDataSource">
 		<property name="driverClassName"
 			value="com.mysql.cj.jdbc.Driver" />
 		<property name="url"
@@ -22,12 +22,9 @@
 	</bean>
 
 	<bean class="org.springframework.jdbc.core.JdbcTemplate"
-		id="jdbcTemplate" p:dataSource-ref="driverManagerDS" />
+		id="getTemplate" p:dataSource-ref="driverManagerDS" />
 
 	<context:component-scan
 		base-package="com.spring.daoImpl" />
-
-<!-- 	<bean class="com.spring.daoImpl.StudentDaoImpl" id="sdi"
-		p:template-ref="jdbcTemplate" /> -->
 
 </beans>
