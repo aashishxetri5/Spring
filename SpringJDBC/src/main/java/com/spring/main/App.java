@@ -30,7 +30,10 @@ public class App {
 		
 //		int result = dao.delete(std.getId());
 		
-		dao.viewRecords();
+//		dao.viewRecords();
+		std = dao.getStudent(211843);
+		
+		System.out.println(std);
 				
 //		System.out.println("Number of records affected: " + result);
 
