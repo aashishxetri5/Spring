@@ -10,10 +10,10 @@ import org.springframework.stereotype.Component;
 import com.spring.dao.StudentDao;
 import com.spring.entities.Student;
 
-@Component("sdi")
+@Component("getSDI")
 public class StudentDaoImpl implements StudentDao {
 
-	@Value("#{jdbcTemplate}")
+	@Value("#{getTemplate}") 
 	private JdbcTemplate template;
 
 	public int insert(Student student) {
