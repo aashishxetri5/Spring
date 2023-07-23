@@ -38,9 +38,10 @@ public class StudentDaoImpl implements StudentDao {
 
 	public List<Student> viewRecords() {
 		String query = "SELECT * FROM Student";
-		this.template.execute(query);
-
-		return null;
+		RowMapper<Student> rowMapper = new RowMapperImpl();
+		List<Student> allStudents = this.template.query(query, rowMapper);
+		
+		return allStudents;
 	}
 
 	public Student getStudent(int id) {

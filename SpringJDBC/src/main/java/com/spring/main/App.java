@@ -1,5 +1,7 @@
 package com.spring.main;
 
+import java.util.List;
+
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 //import org.springframework.jdbc.core.JdbcTemplate;
 
@@ -30,10 +32,12 @@ public class App {
 		
 //		int result = dao.delete(std.getId());
 		
-//		dao.viewRecords();
-		std = dao.getStudent(211843);
+//		std = dao.getStudent(211843);
 		
-		System.out.println(std);
+		List<Student> students = dao.viewRecords();
+		for(Student student: students) {
+			System.out.println(student);			
+		}
 				
 //		System.out.println("Number of records affected: " + result);
 
