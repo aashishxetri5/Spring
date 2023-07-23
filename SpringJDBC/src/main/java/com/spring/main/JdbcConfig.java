@@ -1,14 +1,16 @@
 package com.spring.main;
 
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 
-import com.spring.dao.StudentDao;
-import com.spring.daoImpl.StudentDaoImpl;
+//import com.spring.dao.StudentDao;
+//import com.spring.daoImpl.StudentDaoImpl;
 
 @Configuration
+@ComponentScan(basePackages = {"com.spring.daoImpl"})
 public class JdbcConfig {
 
 	@Bean
@@ -30,13 +32,13 @@ public class JdbcConfig {
 		return template;
 	}
 	
-	@Bean
-	public StudentDao getSDI() {
-		StudentDaoImpl sdi = new StudentDaoImpl();
-		sdi.setTemplate(getTemplate());
-		
-		return sdi;
-	}
+//	@Bean
+//	public StudentDao getSDI() {
+//		StudentDaoImpl sdi = new StudentDaoImpl();
+//		sdi.setTemplate(getTemplate());
+//		
+//		return sdi;
+//	}
 	
 	
 }

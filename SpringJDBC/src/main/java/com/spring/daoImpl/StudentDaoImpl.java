@@ -2,7 +2,8 @@ package com.spring.daoImpl;
 
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Value;
+import org.springframework.beans.factory.annotation.Autowired;
+//import org.springframework.beans.factory.annotation.Value;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Component;
@@ -13,7 +14,7 @@ import com.spring.entities.Student;
 @Component("getSDI")
 public class StudentDaoImpl implements StudentDao {
 
-	@Value("#{getTemplate}") 
+//	@Value("#{getTemplate}")  //Autowired annotation can also be used here. 
 	private JdbcTemplate template;
 
 	public int insert(Student student) {
@@ -55,6 +56,7 @@ public class StudentDaoImpl implements StudentDao {
 		return template;
 	}
 
+	@Autowired
 	public void setTemplate(JdbcTemplate template) {
 		this.template = template;
 	}
