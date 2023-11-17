@@ -44,8 +44,8 @@
 
 	<bean class="com.springcore.autowire.Student" name="Student3"
 		autowire="constructor">
-		<property name="roll" value="1000" />
-		<property name="majorCourse" value="MCS" />
+		<constructor-arg name="roll" value="1000" />
+		<constructor-arg name="majorCourse" value="MCS" />
 	</bean>
 
 

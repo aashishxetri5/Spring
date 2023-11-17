@@ -17,9 +17,11 @@ public class App {
 		
 		Student std1 = ac.getBean("Student1", Student.class); //Type casting not required.
 		Student std2 = ac.getBean("Student2", Student.class); //Type casting not required.
+		Student std3 = ac.getBean("Student3", Student.class); //Type casting not required.
 		
 		System.out.println(std1);
 		System.out.println(std2);
+		System.out.println(std3);
 		
 		ac.close();
 
