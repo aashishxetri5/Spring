@@ -10,11 +10,11 @@ public class Student {
 		super();
 	}
 
-	public Student(int roll, String majorCourse, Person person) {
+	public Student(int roll, String majorCourse, Person person1) {
 		super();
 		this.roll = roll;
 		this.majorCourse = majorCourse;
-		this.person = person;
+		this.person = person1;
 	}
 
 	public int getRoll() {

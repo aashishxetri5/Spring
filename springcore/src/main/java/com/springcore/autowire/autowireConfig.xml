@@ -17,7 +17,7 @@
 
 	<bean class="com.springcore.autowire.Person" name="person1">
 		<constructor-arg name="name" value="John Doe" />
-		<constructor-arg name="age" value="35" />
+		<constructor-arg name="age" value="39" />
 	</bean>
 
 	<!-- Whenever byName is used, it matches the name of the bean of Person 
@@ -35,11 +35,11 @@
 		UnsatisfiedDependencyException because Spring wouldn't know which bean to 
 		wire to. -->
 
-	<bean class="com.springcore.autowire.Student" name="Student2"
+	<!-- <bean class="com.springcore.autowire.Student" name="Student2"
 		autowire="byType">
 		<property name="roll" value="100" />
 		<property name="majorCourse" value="MBA" />
-	</bean>
+	</bean> -->
 	<!-- Remove/Comment this above one to run the main method. -->
 
 	<bean class="com.springcore.autowire.Student" name="Student3"
